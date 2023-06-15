@@ -1,0 +1,38 @@
+touch .gitignore commands.txt requirements.txt && mkdir screenshots && README.md
+
+# all the commands 
+python -m venv myenv && myenv\Scripts\activate.bat && pip install -r requirements.txt
+python -m venv myenv && source myenv/bin/activate && pip install -r requirements.txt
+
+python -m venv myenv
+
+# for windows
+myenv\Scripts\activate.bat
+
+# for linux and macOS
+source myenv/bin/activate
+
+
+pip install -r requirements.txt
+python.exe -m pip install --upgrade pip
+
+pip install jupyter_contrib_nbextensions && pip freeze > requirements.txt
+
+
+2324_SunApril2023
+###########################################################
+regex pattern for 
+1646_Fri_28April2023
+\d{4}_(Mon|Tue|Wed|Thu|Fri|Sat|Sun)_\d{1,2}(January|February|March|April|May|June|July|August|September|October|November|December)\d{4}
+
+Explanation of the regex pattern:
+
+    ## Without the backslash, the letter 'd' would be interpreted as a regular character
+    ## and would only match the literal character 'd'
+    \d{4}: Matches a sequence of 4 digits (e.g., 1646).
+    _: Matches the underscore character.
+    (Mon|Tue|Wed|Thu|Fri|Sat|Sun): Matches any one of the abbreviated weekday names.
+    _: Matches the underscore character again.
+    \d{1,2}: Matches a sequence of 1 or 2 digits (e.g., 28).
+    (January|February|March|April|May|June|July|August|September|October|November|December): Matches any one of the full month names.
+    \d{4}: Matches a sequence of 4 digits (e.g., 2023).
