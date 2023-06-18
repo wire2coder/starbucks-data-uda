@@ -1,43 +1,25 @@
 ## Table of Contents
 - [Summary](#summary)
-- [Description](#description)
-- [Description of Metrics](#Description-of-Metrics)
-- [Getting Started](#getting-started)
+- [The Task](#the-task)
 - [Dependencies](#dependencies)
 - [Installing](#installing)
 - [Executing Program](#executing-program)
+- [File Descriptions](#file-descriptions)
 - [Screenshots](#screenshots)
 
 ## Summary
-Build a machine learning 'pipeline' that can classify emergency text messages in various categories.
-
-## Description
-The objective is to construct a Natural Language Processing (NLP) model capable of categorizing messages from real-life disaster events. The 
-
-## Justification for Selecting 'F1-Score' as the Metric
-
-The 'class' refers to the possible 'outcomes' or 'labels' in a 'classification' problem
-in this project, we have 2 'classes':
-- 0, indicating that the offer (promotion) is 'NOT effective'
-- 1, indicating that the offer (promotion) is 'effective'
-here1
+This data set contains simulated data that mimics customer behavior on the Starbucks rewards mobile app. Once every few days, Starbucks sends out an offer to users of the mobile app. An offer can be merely an advertisement for a drink or an actual offer such as a discount or BOGO (buy one get one free). Some users might not receive any offer during certain weeks. 
 
 
-1. **Precision**: If your model predicts a message as 'related', precision tells you how likely it is that the message is indeed 'related'. High precision is good.
-
-2. **Recall**: Out of all the 'related' messages, recall tells you how many of them your model was able to find. High recall is good.
-
-3. **F1-Score**: This is a combination of precision and recall into a single number. It tries to give you a single score to evaluate your model instead of having to look at two different ones (precision and recall). Again, a high F1 score is good.
-
-4. **Support**: This tells you how many examples of each class you had in the data you used to evaluate the model.
-
+## The Task
+- Combine transaction, demographic and offer data 
+- Build a machine learning 'model' that can determine which demographic groups respond best to which offer type.
 
 ## Getting Started
 1. run Piplines/ETL Pipeline Preparation.ipynb and will make ETL_Preparation.db file
 
 
 ## Dependencies
-
 requirements.txt
 
 - pandas
@@ -68,15 +50,26 @@ pip install -r requirements.txt
 ```
 
 ## Executing Program
+Run the capstone4.ipynb file
 
 
+## File Descriptions
+- data
+  - portfolio.json - containing offer ids and meta data about each offer (duration, type, etc.)
+  - profile.json - demographic data for each customer
+  - transcript.json - records for transactions, offers received, offers viewed, and offers completed
 
 
+- capstone4.ipynb - main file
+- requirements.txt - dependencies
+- screenshots - screenshots of the results
+- capstone_report.pdf - report of the project
 
 
 ## Screenshots
-![alt text](screenshots/etl_database.png)
-
+![alt text](screenshots/age.png)
+![alt text](screenshots/class_balance.png)
+![alt text](screenshots/gender_income.png)
 
 
 
